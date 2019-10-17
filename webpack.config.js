@@ -1,62 +1,88 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
+const webpack = require('webpack');
 const path = require('path');
-const HtmlwebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
-module.exports = {
-  target: 'web',
-  entry: './src/index.tsx',
-  output: {
-    path: path.join(__dirname, '/dist'),
-    filename: '[name].[contenthash].js',
-  },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(ts|js)x?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
+module.exports = (env, options) => {
+  const isDevelopment = options.mode !== 'production';
+
+  return {
+    mode: isDevelopment ? 'development' : 'production',
+    target: 'web',
+    entry: './src/index.tsx',
+    output: {
+      filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
+      path: path.join(__dirname, '/dist'),
+      publicPath: '/',
+    },
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js'],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(ts|js)x?$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+          },
         },
-      },
-    ],
-  },
-  optimization: {
-    runtimeChunk: 'single',
-    moduleIds: 'hashed',
-    splitChunks: {
-      chunks: 'all',
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+      ],
+    },
+    devtool: isDevelopment
+      ? 'cheap-module-eval-source-map'
+      : 'cheap-module-source-map',
+    optimization: {
+      moduleIds: 'hashed',
+      runtimeChunk: 'single',
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            name: 'vendors',
+            test: /[\\/]node_modules[\\/]/,
+          },
         },
       },
     },
-  },
-  plugins: [
-    new HtmlwebpackPlugin({
-      template: './src/index.html',
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true,
-      },
-    }),
-  ],
-  stats: {
-    errors: true,
-    errorDetails: true,
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    port: 8080,
-    open: true,
-    historyApiFallback: true,
-  },
+    plugins: [
+      new HtmlWebpackPlugin({
+        minify: isDevelopment
+          ? false
+          : {
+              collapseWhitespace: true,
+              removeComments: true,
+              removeRedundantAttributes: true,
+              removeScriptTypeAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              useShortDoctype: true,
+            },
+        template: './src/index.html',
+      }),
+      ...(isDevelopment
+        ? []
+        : [
+            new CompressionPlugin({
+              algorithm: 'brotliCompress',
+              compressionOptions: { level: 11 },
+              filename: '[path].br[query]',
+              test: /\.(js|css|html|svg)$/,
+            }),
+          ]),
+      ...(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : []),
+    ],
+    stats: {
+      errors: true,
+      errorDetails: true,
+    },
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),
+      historyApiFallback: true,
+      hot: true,
+      open: true,
+      port: 8080,
+    },
+  };
 };
