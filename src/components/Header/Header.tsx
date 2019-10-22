@@ -14,7 +14,7 @@ export const Header: React.FunctionComponent = () => {
       <Wrapper>
         <Logo>Vanilla Client</Logo>
         <nav>
-          <NavLink to="/home" activeStyle={ActiveNavLink}>
+          <NavLink exact to="/" activeStyle={ActiveNavLink}>
             Home
           </NavLink>
           <NavLink to="/about" activeStyle={ActiveNavLink}>

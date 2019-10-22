@@ -13,7 +13,6 @@ export const App: React.FunctionComponent = () => {
         <Main>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/home" component={Home} />
             <Route path="/about" component={About} />
           </Switch>
         </Main>
