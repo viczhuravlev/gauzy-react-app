@@ -15,7 +15,6 @@ module.exports = (env, options) => {
     output: {
       filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
       path: path.join(__dirname, '/dist'),
-      publicPath: '/',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js'],
@@ -53,6 +52,9 @@ module.exports = (env, options) => {
           ? false
           : {
               collapseWhitespace: true,
+              minifyCSS: true,
+              minifyJS: true,
+              minifyURLs: true,
               removeComments: true,
               removeRedundantAttributes: true,
               removeScriptTypeAttributes: true,
@@ -78,7 +80,7 @@ module.exports = (env, options) => {
       errorDetails: true,
     },
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
+      contentBase: 'dist',
       historyApiFallback: true,
       hot: true,
       open: true,
