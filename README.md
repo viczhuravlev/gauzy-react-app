@@ -4,7 +4,7 @@
 
 <br>
 
-This is a basic client template project to use as starting point to build something or to just test stuff. It has been done in a reasonably vanilla way to see how everything works under the hood and to allow to configure the necessary.
+This is a basic frontend template project to use as starting point to build something or to just test stuff. It has been done in a reasonably vanilla way to see how everything works under the hood and to allow to configure the necessary.
 
 <br>
 
@@ -21,7 +21,13 @@ The tech stack is:
 
 <br>
 
-To use it, you can fork, clone, or generate a repo from this template, download it into your computer, run `yarn install` and then `yarn start` to start the development server. To create a production build, run `yarn build`.
+To use it, you can fork, clone, or generate a repo from this template, download it into your computer, run `yarn install` to install the required dependencies, and then `yarn start` to start the development server at `localhost:8080`.
+
+To create a production build, run `yarn build`, and to serve a production build, run `yarn serve`, which will be available at `localhost:4040`.
+
+<br>
+
+Also, feel free to contribute if you think something can be improved in any way.
 
 <br>
 
