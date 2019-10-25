@@ -27,6 +27,8 @@ To use it, you can fork, clone, or generate a repo from this template, download 
 
 To create a production build, run `yarn build`, and to serve a production build, run `yarn serve`, which will be available at `localhost:4040`.
 
+> Any command can be run with `npm` instead of `yarn` too.
+
 <br>
 
 ## Project structure
@@ -54,7 +56,7 @@ Once the dependendencies have been installed, the project structure is:
     ├── webpack.config.js
     └── yarn.lock
 
-## Files details
+## Files information
 
 - **`/node_modules`**: This directory contains all of the modules of code (npm packages) that the project depends on.
 
@@ -78,9 +80,9 @@ Once the dependendencies have been installed, the project structure is:
 
 - **`.gitignore`**: A file that tells [Git](https://git-scm.com) which files it should not track / not maintain a version history for.
 
-- **`global.d.ts`**: A file that declares special modules that are used in the project to TypeScript.
+- **`global.d.ts`**: A file that declares special modules that are used in the project to [TypeScript](https://www.typescriptlang.org).
 
--**`LICENSE`**: The license under which this repository is released.
+- **`LICENSE`**: The license under which this repository is released.
 
 - **`package.json`**: A file which includes things like the project’s name, author, dependencies, etc. This file is how yarn/npm knows which packages to install for the project.
 
