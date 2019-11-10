@@ -46,6 +46,10 @@ module.exports = (env, options) => {
         },
       },
     },
+    performance: {
+      hints: isDevelopment ? 'warning' : 'error',
+      maxEntrypointSize: 300_000,
+    },
     plugins: [
       new HtmlWebpackPlugin({
         minify: isDevelopment
@@ -76,8 +80,15 @@ module.exports = (env, options) => {
       ...(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : []),
     ],
     stats: {
+      assetsSort: '!size',
+      builtAt: false,
+      children: false,
+      entrypoints: false,
       errors: true,
       errorDetails: true,
+      hash: false,
+      modules: false,
+      timings: false,
     },
     devServer: {
       contentBase: 'dist',
