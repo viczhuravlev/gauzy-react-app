@@ -19,7 +19,7 @@ const About = lazy(() =>
 
 export const App: React.FunctionComponent = () => {
   return (
-    <>
+    <React.StrictMode>
       <BrowserRouter>
         <GlobalStyles />
         <Header />
@@ -32,6 +32,6 @@ export const App: React.FunctionComponent = () => {
           </Suspense>
         </Main>
       </BrowserRouter>
-    </>
+    </React.StrictMode>
   );
 };
