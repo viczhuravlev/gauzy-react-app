@@ -43,41 +43,41 @@ export const GlobalStyles = createGlobalStyle`
 
   /* Box sizing rules */
   *,
-  *::before,
-  *::after {
+  *::after,
+  *::before {
     box-sizing: border-box;
   }
 
   /* Remove default padding */
-  ul[class],
-  ol[class] {
+  ol[class],
+  ul[class] {
     padding: 0;
   }
 
   /* Remove default margin */
+  blockquote,
   body,
+  dd,
+  dl,
+  figcaption,
+  figure,
   h1,
   h2,
   h3,
   h4,
-  p,
-  ul[class],
-  ol[class],
   li,
-  figure,
-  figcaption,
-  blockquote,
-  dl,
-  dd {
+  ol[class],
+  p,
+  ul[class] {
     margin: 0;
   }
 
   /* Set core body defaults */
   body {
+    line-height: 1.5;
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
   }
 
   /* Remove list styles on ul, ol elements with a class attribute */
@@ -93,8 +93,8 @@ export const GlobalStyles = createGlobalStyle`
 
   /* Make images easier to work with */
   img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
   }
 
   /* Natural flow and rhythm in articles by default */
@@ -103,10 +103,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   /* Inherit fonts for inputs and buttons */
-  input,
   button,
-  textarea,
-  select {
+  input,
+  select,
+  textarea {
     font: inherit;
   }
 
@@ -115,8 +115,8 @@ export const GlobalStyles = createGlobalStyle`
     * {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
     }
   }
 `;
