@@ -17,7 +17,7 @@ const About = lazy(() =>
   }))
 );
 
-export const App: React.FunctionComponent = () => {
+export function App(): JSX.Element {
   return (
     <React.StrictMode>
       <BrowserRouter>
@@ -34,4 +34,4 @@ export const App: React.FunctionComponent = () => {
       </BrowserRouter>
     </React.StrictMode>
   );
-};
+}

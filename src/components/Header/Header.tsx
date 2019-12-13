@@ -8,7 +8,7 @@ import {
   Wrapper,
 } from './Header.styles';
 
-export const Header: React.FunctionComponent = () => {
+export function Header(): JSX.Element {
   return (
     <FixedBar>
       <Wrapper>
@@ -24,4 +24,4 @@ export const Header: React.FunctionComponent = () => {
       </Wrapper>
     </FixedBar>
   );
-};
+}
