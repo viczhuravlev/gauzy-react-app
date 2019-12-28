@@ -94,7 +94,7 @@ module.exports = (env, options) => {
       contentBase: 'dist',
       historyApiFallback: true,
       hot: true,
-      port: 8080
+      port: 7001
     }
   };
 };
