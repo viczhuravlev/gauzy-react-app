@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink as RouterLink } from 'react-router-dom';
 
 export const ActiveNavLink = {
-  boxShadow: '0px 3px 0 0 var(--color-accent)',
+  boxShadow: '0px 3px 0 0 var(--color-accent)'
 };
 
 export const FixedBar = styled.header`

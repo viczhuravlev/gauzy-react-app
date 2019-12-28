@@ -14,10 +14,10 @@ module.exports = (env, options) => {
     entry: './src/index.tsx',
     output: {
       filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
-      path: path.join(__dirname, '/dist'),
+      path: path.join(__dirname, '/dist')
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.js'],
+      extensions: ['.ts', '.tsx', '.js']
     },
     module: {
       rules: [
@@ -25,10 +25,10 @@ module.exports = (env, options) => {
           test: /\.(ts|js)x?$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
-          },
-        },
-      ],
+            loader: 'babel-loader'
+          }
+        }
+      ]
     },
     devtool: isDevelopment
       ? 'cheap-module-eval-source-map'
@@ -41,14 +41,14 @@ module.exports = (env, options) => {
         cacheGroups: {
           vendor: {
             name: 'vendors',
-            test: /[\\/]node_modules[\\/]/,
-          },
-        },
-      },
+            test: /[\\/]node_modules[\\/]/
+          }
+        }
+      }
     },
     performance: {
       hints: isDevelopment ? 'warning' : 'error',
-      maxEntrypointSize: 300_000,
+      maxEntrypointSize: 300_000
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -63,9 +63,9 @@ module.exports = (env, options) => {
               removeRedundantAttributes: true,
               removeScriptTypeAttributes: true,
               removeStyleLinkTypeAttributes: true,
-              useShortDoctype: true,
+              useShortDoctype: true
             },
-        template: './src/index.html',
+        template: './src/index.html'
       }),
       ...(isDevelopment
         ? []
@@ -74,10 +74,10 @@ module.exports = (env, options) => {
               algorithm: 'brotliCompress',
               compressionOptions: { level: 11 },
               filename: '[path].br[query]',
-              test: /\.(js|css|html|svg)$/,
-            }),
+              test: /\.(js|css|html|svg)$/
+            })
           ]),
-      ...(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : []),
+      ...(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : [])
     ],
     stats: {
       assetsSort: '!size',
@@ -88,13 +88,13 @@ module.exports = (env, options) => {
       errorDetails: true,
       hash: false,
       modules: false,
-      timings: false,
+      timings: false
     },
     devServer: {
       contentBase: 'dist',
       historyApiFallback: true,
       hot: true,
-      port: 8080,
-    },
+      port: 8080
+    }
   };
 };

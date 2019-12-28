@@ -1,24 +1,24 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-  },
+    'react-hooks/exhaustive-deps': 'warn'
+  }
 };

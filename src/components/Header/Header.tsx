@@ -5,7 +5,7 @@ import {
   FixedBar,
   Logo,
   NavLink,
-  Wrapper,
+  Wrapper
 } from './Header.styles';
 
 export function Header(): JSX.Element {
