@@ -25,7 +25,10 @@ module.exports = (env, options) => {
           test: /\.(ts|js)x?$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true
+            }
           }
         }
       ]
@@ -34,8 +37,9 @@ module.exports = (env, options) => {
       ? 'cheap-module-eval-source-map'
       : 'cheap-module-source-map',
     optimization: {
-      moduleIds: 'hashed',
-      runtimeChunk: 'single',
+      runtimeChunk: {
+        name: 'runtime'
+      },
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
@@ -43,11 +47,12 @@ module.exports = (env, options) => {
             name: 'vendors',
             test: /[\\/]node_modules[\\/]/
           }
-        }
+        },
+        name: false
       }
     },
     performance: {
-      hints: isDevelopment ? 'warning' : 'error',
+      hints: isDevelopment ? false : 'error',
       maxEntrypointSize: 300_000
     },
     plugins: [
