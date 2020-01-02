@@ -9,7 +9,7 @@
   "scripts": {
     "start": "tsc && rm -rf ./dist && webpack-dev-server --mode=development",
     "build": "tsc && rm -rf ./dist && webpack --mode=production",
-    "serve": "yarn build && serve -s dist -l 4040"
+    "serve": "serve -s dist -l 7002"
   },
   "dependencies": {
     "react": "^16.12.0",
