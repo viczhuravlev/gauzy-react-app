@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const InlineChunkWebpackPlugin = require('fixed-webpack4-html-webpack-inline-chunk-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = (env, options) => {
@@ -71,6 +72,10 @@ module.exports = (env, options) => {
               useShortDoctype: true
             },
         template: './src/index.html'
+      }),
+      new InlineChunkWebpackPlugin({
+        inlineChunks: ['runtime'],
+        quiet: true
       }),
       ...(isDevelopment
         ? []
