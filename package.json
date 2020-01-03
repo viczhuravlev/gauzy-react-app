@@ -1,8 +1,8 @@
 {
-  "name": "vanilla-client",
-  "description": "A simple vanilla frontend boilerplate to build upon or test stuff.",
+  "name": "gauzy-frontend",
+  "description": "A transparent frontend template to build upon or test stuff.",
   "author": "@lewislbr",
-  "repository": "https://github.com/lewislbr/vanilla-client.git",
+  "repository": "https://github.com/lewislbr/gauzy-frontend.git",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,

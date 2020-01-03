@@ -1,12 +1,12 @@
 <h1 align="center">
-  Vanilla 🍦 Client
+  Gauzy ⚗️ Frontend
 </h1>
 
 <br>
 
 ## Description
 
-This is a basic frontend template project to use as starting point to build something or to just test stuff. It has been done in a reasonably vanilla way to see how everything works under the hood and to allow to configure the necessary.
+This is a basic frontend template project to use as starting point to build something or to just test stuff. It has been done in a reasonably transparent way to see how everything works under the hood and to allow to configure the necessary.
 
 The tech stack is:
 
@@ -23,9 +23,9 @@ The tech stack is:
 
 ## Instructions
 
-To use it, you can fork, clone, or generate a repo from this template, download it into your computer, run `yarn install` to install the required dependencies, and then `yarn start` to start the development server at `localhost:8080`.
+To use it, you can fork, clone, or generate a repo from this template, download it into your computer, run `yarn install` to install the required dependencies, and then `yarn start` to start the development server at `localhost:7001`.
 
-To create a production build, run `yarn build`, and to serve a production build, run `yarn serve`, which will be available at `localhost:4040`.
+To create a production build, run `yarn build`, and to serve a production build, run `yarn serve`, which will be available at `localhost:7002`.
 
 > Any command can be run with `npm` instead of `yarn` too.
 
@@ -46,8 +46,8 @@ Once the dependendencies have been installed, the project structure is:
     │    └── index.tsx
     ├── .babelrc
     ├── .eslintrc.js
-    ├── .prettierrc
     ├── .gitignore
+    ├── .prettierrc
     ├── global.d.ts
     ├── LICENSE
     ├── package.json
@@ -76,9 +76,9 @@ Once the dependendencies have been installed, the project structure is:
 
 - **`.eslintrc.js`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript and JSX.
 
-- **`.prettierrc`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
-
 - **`.gitignore`**: A file that tells [Git](https://git-scm.com) which files it should not track / not maintain a version history for.
+
+- **`.prettierrc`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
 
 - **`global.d.ts`**: A file that declares special modules that are used in the project to [TypeScript](https://www.typescriptlang.org).
 

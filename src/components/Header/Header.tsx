@@ -12,7 +12,7 @@ export function Header(): JSX.Element {
   return (
     <FixedBar>
       <Wrapper>
-        <Logo>Vanilla Client</Logo>
+        <Logo>Gauzy ⚗️ Frontend</Logo>
         <nav>
           <NavLink exact to="/" activeStyle={ActiveNavLink}>
             Home
