@@ -1,3 +1,3 @@
-export { GlobalStyles } from './GlobalStyles';
-export { Header } from './Header';
-export { Main } from './Main';
+export { GlobalStyles } from './GlobalStyles/GlobalStyles';
+export { Header } from './Header/Header';
+export { Main } from './Main/Main';

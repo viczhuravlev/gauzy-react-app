@@ -25,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: var(--color-dark);
     color: var(--color-light);
-    font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: var(--font-size-s);
     padding-top: 80px;
     
