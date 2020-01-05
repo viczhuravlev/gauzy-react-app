@@ -3,8 +3,8 @@
     [
       "@babel/preset-env",
       {
-        "targets": { "browsers": "> 0.5%, not dead" },
-        "modules": false
+        "modules": false,
+        "targets": { "browsers": "> 0.5%, not dead" }
       }
     ],
     "@babel/preset-react",

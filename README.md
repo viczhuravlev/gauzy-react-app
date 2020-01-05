@@ -40,6 +40,7 @@ Once the dependendencies have been installed, the project structure is:
     │    └── (many stuff)
     ├── src
     │    ├── components
+    │    ├── constants
     │    ├── views
     │    ├── App.tsx
     │    ├── index.html
@@ -63,6 +64,8 @@ Once the dependendencies have been installed, the project structure is:
 - **`/src`**: This directory contains all of the app's source code.
 
   - `/components`: This folder contains files that represent reusable UI pieces.
+
+  - `/constants`: This folder contains files that represent constant values used by components.
 
   - `/views`: This folder contains the views of the application, which are larger components made up of smaller components.
 

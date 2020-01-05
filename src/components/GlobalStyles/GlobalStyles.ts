@@ -1,24 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { CONTENT_WIDTH, MEDIA_BREAK } from '../../constants/layout';
+
 export const GlobalStyles = createGlobalStyle`
   :root {
     --color-accent: hsl(49, 100%, 71%);
     --color-dark: hsl(0, 0%, 10%);
     --color-dark-translucent: hsla(0, 0%, 10%, 0.85);
-    --color-error: hsl(343, 100%, 45%);
     --color-light: hsl(70, 0%, 95%);
-    --color-success: hsl(133, 60%, 67%);
-    --content-width: 1000px;
-    --font-size-xxs: 15px;
+    --content-width: ${CONTENT_WIDTH}px;
     --font-size-xs: 17px;
     --font-size-s: 18px;
     --font-size-m: 22px;
     --font-size-l: 30px;
     --font-size-xl: 46px;
-    --font-size-xxl: 60px;
     --padding: 4%;
-    --radius-l: 10px;
-    --radius-m: 6px;
   }
 
   html
@@ -29,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: var(--font-size-s);
     padding-top: 80px;
     
-    @media (max-width: 600px) {
+    @media (max-width: ${MEDIA_BREAK}) {
       font-size: var(--font-size-xs);
     }
   }
