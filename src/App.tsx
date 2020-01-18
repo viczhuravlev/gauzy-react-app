@@ -10,7 +10,9 @@ const Home = lazy(() =>
   }))
 );
 
-const preloadAbout = import('./views/About/About' /* webpackChunkName: 'About' */);
+const preloadAbout = import(
+  './views/About/About' /* webpackChunkName: 'About' */
+);
 const About = lazy(() =>
   preloadAbout.then(({ About }) => ({
     default: About
