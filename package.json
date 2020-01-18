@@ -13,6 +13,11 @@
     "lint": "./node_modules/.bin/eslint --ignore-pattern '/node-modules/' --ignore-pattern '/dist/' --ext .ts --ext .tsx .",
     "format": "prettier --write --check \"{,!(dist)/**/}*.{js,jsx,ts,tsx,html,css,json,md}\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn format"
+    }
+  },
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -39,6 +44,7 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "fixed-webpack4-html-webpack-inline-chunk-plugin": "^2.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.0.10",
     "prettier": "^1.19.1",
     "serve": "^11.3.0",
     "styled-components": "^5.0.0",
