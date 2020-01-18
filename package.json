@@ -10,8 +10,8 @@
     "start": "tsc && webpack-dev-server --mode=development",
     "build": "rm -rf dist && tsc && webpack --mode=production",
     "serve": "serve -s dist -l 7002",
-    "lint": "./node_modules/.bin/eslint --ignore-pattern '/node-modules/' --ignore-pattern '/dist/' --ext .ts --ext .tsx .",
-    "format": "prettier --write --check \"{,!(dist)/**/}*.{js,jsx,ts,tsx,html,css,json,md}\""
+    "lint": "./node_modules/.bin/eslint \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write --check \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx,html,css,json,md}\""
   },
   "husky": {
     "hooks": {
