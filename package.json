@@ -9,7 +9,8 @@
   "scripts": {
     "start": "tsc && webpack-dev-server --mode=development",
     "build": "rm -rf dist && tsc && webpack --mode=production",
-    "serve": "serve -s dist -l 7002"
+    "serve": "serve -s dist -l 7002",
+    "lint": "./node_modules/.bin/eslint --ignore-pattern '/node-modules/' --ignore-pattern '/dist/' --ext .ts --ext .tsx ."
   },
   "dependencies": {
     "react": "^16.12.0",
