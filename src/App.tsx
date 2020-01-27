@@ -6,8 +6,8 @@ import { GlobalStyles, Header, Main } from './components';
 const preloadHome = import('./views/Home/Home' /* webpackChunkName: 'Home' */);
 const Home = lazy(() =>
   preloadHome.then(({ Home }) => ({
-    default: Home
-  }))
+    default: Home,
+  })),
 );
 
 const preloadAbout = import(
@@ -15,8 +15,8 @@ const preloadAbout = import(
 );
 const About = lazy(() =>
   preloadAbout.then(({ About }) => ({
-    default: About
-  }))
+    default: About,
+  })),
 );
 
 export function App(): JSX.Element {

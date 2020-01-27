@@ -15,10 +15,10 @@ module.exports = (env, options) => {
     entry: './src/index.tsx',
     output: {
       filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
-      path: path.join(__dirname, '/dist')
+      path: path.join(__dirname, '/dist'),
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.js']
+      extensions: ['.ts', '.tsx', '.js'],
     },
     module: {
       rules: [
@@ -28,33 +28,33 @@ module.exports = (env, options) => {
           use: {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: true
-            }
-          }
-        }
-      ]
+              cacheDirectory: true,
+            },
+          },
+        },
+      ],
     },
     devtool: isDevelopment
       ? 'cheap-module-eval-source-map'
       : 'cheap-module-source-map',
     optimization: {
       runtimeChunk: {
-        name: 'runtime'
+        name: 'runtime',
       },
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
           vendor: {
             name: 'vendors',
-            test: /[\\/]node_modules[\\/]/
-          }
+            test: /[\\/]node_modules[\\/]/,
+          },
         },
-        name: false
-      }
+        name: false,
+      },
     },
     performance: {
       hints: isDevelopment ? false : 'error',
-      maxEntrypointSize: 300_000
+      maxEntrypointSize: 300_000,
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -69,13 +69,13 @@ module.exports = (env, options) => {
               removeRedundantAttributes: true,
               removeScriptTypeAttributes: true,
               removeStyleLinkTypeAttributes: true,
-              useShortDoctype: true
+              useShortDoctype: true,
             },
-        template: './src/index.html'
+        template: './src/index.html',
       }),
       new InlineChunkWebpackPlugin({
         inlineChunks: ['runtime'],
-        quiet: true
+        quiet: true,
       }),
       ...(isDevelopment
         ? []
@@ -84,10 +84,10 @@ module.exports = (env, options) => {
               algorithm: 'brotliCompress',
               compressionOptions: { level: 11 },
               filename: '[path].br[query]',
-              test: /\.(js|css|html|svg)$/
-            })
+              test: /\.(js|css|html|svg)$/,
+            }),
           ]),
-      ...(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : [])
+      ...(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : []),
     ],
     stats: {
       assetsSort: '!size',
@@ -98,13 +98,13 @@ module.exports = (env, options) => {
       errorDetails: true,
       hash: false,
       modules: false,
-      timings: false
+      timings: false,
     },
     devServer: {
       contentBase: 'dist',
       historyApiFallback: true,
       hot: true,
-      port: 7001
-    }
+      port: 7001,
+    },
   };
 };
