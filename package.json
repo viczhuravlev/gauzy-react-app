@@ -11,7 +11,7 @@
     "build": "rm -rf dist && tsc && webpack --mode=production",
     "serve": "serve -s dist -l 7002",
     "lint": "./node_modules/.bin/eslint \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx}\"",
-    "format": "prettier --write --check \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx,html,css,json,md}\""
+    "format": "prettier --write --check \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml,graphql}\""
   },
   "husky": {
     "hooks": {
@@ -22,7 +22,7 @@
     "*.{js,jsx,ts,tsx}": [
       "yarn lint"
     ],
-    "*.{js,jsx,ts,tsx,html,css,json,md}": [
+    "*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml,graphql}": [
       "yarn format"
     ]
   },
