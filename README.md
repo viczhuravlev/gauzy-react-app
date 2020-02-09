@@ -77,7 +77,7 @@ Once the dependendencies have been installed, the project structure is:
 
 - **`.babelrc`**: A configuration file for [Babel](https://babeljs.io), a JavaScript compiler.
 
-- **`.eslintrc.js`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript and JSX.
+- **`.eslintrc.js`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript, TypeScript, and React.
 
 - **`.gitignore`**: A file that tells [Git](https://git-scm.com) which files it should not track / not maintain a version history for.
 
