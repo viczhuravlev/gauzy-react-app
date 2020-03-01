@@ -18,6 +18,8 @@ The tech stack is:
 - [Babel](https://babeljs.io)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
+- [Jest](https://jestjs.io)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
 <br>
 
@@ -48,6 +50,8 @@ Once the dependendencies have been installed, the project structure is:
     ├── .gitignore
     ├── .prettierrc.json
     ├── global.d.ts
+    ├── jest.config.js
+    ├── jest.setup.js
     ├── LICENSE
     ├── package.json
     ├── README.md
@@ -82,6 +86,10 @@ Once the dependendencies have been installed, the project structure is:
 - **`.prettierrc.json`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
 
 - **`global.d.ts`**: A file that declares special modules that are used in the project to [TypeScript](https://www.typescriptlang.org).
+
+- **`jest.config.js`**: A configuration file for [Jest](https://jestjs.io), a JavaScript testing framework.
+
+- **`jest.setup.js`**: A setup file for [Jest](https://jestjs.io), a JavaScript testing framework.
 
 - **`LICENSE`**: The license under which this repository is released.
 
