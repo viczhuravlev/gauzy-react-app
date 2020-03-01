@@ -45,10 +45,10 @@ Once the dependendencies have been installed, the project structure is:
     │    ├── App.tsx
     │    ├── index.html
     │    └── index.tsx
-    ├── .babelrc
-    ├── .eslintrc.js
+    ├── .babelrc.json
+    ├── .eslintrc.json
     ├── .gitignore
-    ├── .prettierrc
+    ├── .prettierrc.json
     ├── global.d.ts
     ├── LICENSE
     ├── package.json
@@ -75,13 +75,13 @@ Once the dependendencies have been installed, the project structure is:
 
   - `index.tsx`: This component defines where in the `index.html` template the `App.tsx` component is placed and rendered.
 
-- **`.babelrc`**: A configuration file for [Babel](https://babeljs.io), a JavaScript compiler.
+- **`.babelrc.json`**: A configuration file for [Babel](https://babeljs.io), a JavaScript compiler.
 
-- **`.eslintrc.js`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript, TypeScript, and React.
+- **`.eslintrc.json`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript, TypeScript, and React.
 
 - **`.gitignore`**: A file that tells [Git](https://git-scm.com) which files it should not track / not maintain a version history for.
 
-- **`.prettierrc`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
+- **`.prettierrc.json`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
 
 - **`global.d.ts`**: A file that declares special modules that are used in the project to [TypeScript](https://www.typescriptlang.org).
 
