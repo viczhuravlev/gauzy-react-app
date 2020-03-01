@@ -27,8 +27,6 @@ To use it, you can fork, clone, or generate a repo from this template, download 
 
 To create a production build, run `yarn build`, and to serve a production build, run `yarn serve`, which will be available at `localhost:7002`.
 
-> Any command can be run with `npm` instead of `yarn` too.
-
 <br>
 
 ## Project structure
