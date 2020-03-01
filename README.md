@@ -59,6 +59,8 @@ Once the dependendencies have been installed, the project structure is:
     ├── webpack.config.js
     └── yarn.lock
 
+<br>
+
 ## Files information
 
 - **`/node_modules`**: This directory contains all of the modules of code (npm packages) that the project depends on.
