@@ -2,16 +2,16 @@ import React from 'react';
 
 import {
   ActiveNavLink,
-  FixedBar,
+  Container,
   Logo,
   NavLink,
-  Wrapper,
+  StyledHeader,
 } from './Header.styles';
 
 export function Header(): JSX.Element {
   return (
-    <FixedBar>
-      <Wrapper>
+    <StyledHeader>
+      <Container>
         <Logo>Gauzy ⚗️ Frontend</Logo>
         <nav>
           <NavLink exact to="/" activeStyle={ActiveNavLink}>
@@ -21,7 +21,7 @@ export function Header(): JSX.Element {
             About
           </NavLink>
         </nav>
-      </Wrapper>
-    </FixedBar>
+      </Container>
+    </StyledHeader>
   );
 }
