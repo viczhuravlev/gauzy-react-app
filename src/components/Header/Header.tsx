@@ -12,13 +12,13 @@ export function Header(): JSX.Element {
   return (
     <StyledHeader>
       <Container>
-        <Logo>Gauzy ⚗️ Frontend</Logo>
+        <Logo>{'Gauzy ⚗️ Frontend'}</Logo>
         <nav>
           <NavLink exact to="/" activeStyle={ActiveNavLink}>
-            Home
+            {'Home'}
           </NavLink>
           <NavLink to="/about" activeStyle={ActiveNavLink}>
-            About
+            {'About'}
           </NavLink>
         </nav>
       </Container>

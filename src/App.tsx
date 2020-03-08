@@ -26,7 +26,7 @@ export function App(): JSX.Element {
         <GlobalStyles />
         <Header />
         <Main>
-          <React.Suspense fallback={<div>Loading...</div>}>
+          <React.Suspense fallback={<div>{'Loading...'}</div>}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
