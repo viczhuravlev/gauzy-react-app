@@ -11,7 +11,7 @@
     "build": "rm -rf dist && tsc && webpack --mode=production",
     "serve": "serve -s dist -l 7002",
     "test": "jest",
-    "lint": "./node_modules/.bin/eslint \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write --check \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml,graphql}\"",
     "reset": "rm -rf .cache dist node_modules && yarn install --frozen-lockfile"
   },
