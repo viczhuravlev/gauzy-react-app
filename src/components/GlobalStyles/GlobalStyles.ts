@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
-import { CONTENT_WIDTH, MEDIA_BREAK } from '../../constants/layout';
+import {CONTENT_WIDTH, MEDIA_BREAK} from '../../constants/layout';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
