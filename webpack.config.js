@@ -14,7 +14,7 @@ module.exports = (env, options) => {
     target: 'web',
     entry: './src/index.tsx',
     output: {
-      filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
+      filename: isDevelopment ? '[name].js' : '[name].[contenthash:8].js',
       path: path.join(__dirname, '/dist'),
     },
     resolve: {
@@ -34,9 +34,7 @@ module.exports = (env, options) => {
         },
       ],
     },
-    devtool: isDevelopment
-      ? 'cheap-module-eval-source-map'
-      : 'cheap-module-source-map',
+    devtool: isDevelopment ? 'eval-cheap-module-source-map' : 'source-map',
     optimization: {
       runtimeChunk: {
         name: 'runtime',
@@ -62,10 +60,12 @@ module.exports = (env, options) => {
           ? false
           : {
               collapseWhitespace: true,
+              keepClosingSlash: true,
               minifyCSS: true,
               minifyJS: true,
               minifyURLs: true,
               removeComments: true,
+              removeEmptyAttributes: true,
               removeRedundantAttributes: true,
               removeScriptTypeAttributes: true,
               removeStyleLinkTypeAttributes: true,
