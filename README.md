@@ -25,9 +25,16 @@ The tech stack is:
 
 ## Instructions
 
-To use it, you can fork, clone, or generate a repo from this template, download it into your computer, run `yarn install` to install the required dependencies, and then `yarn start` to start the development server at `localhost:7001`.
+Firstly, you need to have installed [Node.js](https://nodejs.org), [Yarn](https://classic.yarnpkg.com), and [Docker](https://www.docker.com/) if you want.
 
-To create a production build, run `yarn build`, and to serve a production build, run `yarn serve`, which will be available at `localhost:7002`.
+To work on it, you can fork, clone, or generate a repo from this template, and download it into your computer.
+
+To initialize the project you can:
+
+1. Run the command `yarn install --frozen-lockfile` to install the required dependencies.
+2. Run `yarn start` to start a local development server, or `docker-compose up` to initialize it with [Docker](https://www.docker.com/).
+
+To create a production build, run `yarn build`, and to serve it, run `yarn serve`.
 
 <br>
 
@@ -46,9 +53,12 @@ Once the dependendencies have been installed, the project structure is:
     │    ├── index.html
     │    └── index.tsx
     ├── .babelrc.json
+    ├── .dockerignore
     ├── .eslintrc.json
     ├── .gitignore
     ├── .prettierrc.json
+    ├── docker-compose.yml
+    ├── Dockerfile
     ├── global.d.ts
     ├── jest.config.js
     ├── jest.setup.js
@@ -81,11 +91,17 @@ Once the dependendencies have been installed, the project structure is:
 
 - **`.babelrc.json`**: A configuration file for [Babel](https://babeljs.io), a JavaScript compiler.
 
+- **`.dockerignore`**: A file that tells [Docker](https://www.docker.com/) which files it should not include in a image.
+
 - **`.eslintrc.json`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript, TypeScript, and React.
 
 - **`.gitignore`**: A file that tells [Git](https://git-scm.com) which files it should not track / not maintain a version history for.
 
 - **`.prettierrc.json`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
+
+- **`docker-compose.yml`**: A file that defines the [Docker](https://www.docker.com/) services to run and its configuration.
+
+* **`Dockerfile`**: A file that specifies the instructions to build a [Docker](https://www.docker.com/) image.
 
 - **`global.d.ts`**: A file that declares special modules that are used in the project to [TypeScript](https://www.typescriptlang.org).
 

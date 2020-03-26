@@ -103,8 +103,14 @@ module.exports = (env, options) => {
     devServer: {
       contentBase: 'dist',
       historyApiFallback: true,
+      host: '0.0.0.0',
       hot: true,
       port: 7001,
+    },
+    watchOptions: {
+      aggregateTimeout: 300,
+      ignored: /node_modules/,
+      poll: true,
     },
   };
 };

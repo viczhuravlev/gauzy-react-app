@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  frontend:
+    build: ./
+    image: gauzy-frontend
+    environment:
+      NODE_ENV: development
+    ports:
+      - 7001:7001
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
