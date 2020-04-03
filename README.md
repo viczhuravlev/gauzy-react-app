@@ -25,14 +25,13 @@ The tech stack is:
 
 ## Instructions
 
-Firstly, you need to have installed [Node.js](https://nodejs.org), [Yarn](https://classic.yarnpkg.com), and [Docker](https://www.docker.com/) if you want.
-
 To work on it, you can fork, clone, or generate a repo from this template, and download it into your computer.
 
-To initialize the project you can:
+To initialize the project you have two options:
 
-1. Run the command `yarn install --frozen-lockfile` to install the required dependencies.
-2. Run `yarn start` to start a local development server, or `docker-compose up` to initialize it with [Docker](https://www.docker.com/).
+1. Install [Node.js](https://nodejs.org) and [Yarn](https://classic.yarnpkg.com), run the command `yarn install --frozen-lockfile` to install the required dependencies, and run `yarn start` to start a local development server.
+
+2. Run `docker-compose up` to initialize it with [Docker](https://www.docker.com/).
 
 To create a production build, run `yarn build`, and to serve it, run `yarn serve`.
 
