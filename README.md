@@ -29,11 +29,11 @@ To work on it, you can fork, clone, or generate a repo from this template, and d
 
 To initialize the project you have two options:
 
-1. Install [Node.js](https://nodejs.org) and [Yarn](https://classic.yarnpkg.com), run the command `yarn install --frozen-lockfile` to install the required dependencies, and run `yarn start` to start a local development server.
+1. Install [Node.js](https://nodejs.org), then, run `npm ci` to install the required dependencies, and run `npm run start` to start a local development server.
 
-2. Run `docker-compose up` to initialize it with [Docker](https://www.docker.com/).
+2. Run `docker-compose up` to initialize it with [Docker](https://www.docker.com/). To use Husky, you'll need to install [Node.js](https://nodejs.org).
 
-To create a production build, run `yarn build`, and to serve it, run `yarn serve`.
+To create a production build, run `npm run build`, and to serve it, run `npm run serve`.
 
 <br>
 
@@ -62,11 +62,11 @@ Once the dependendencies have been installed, the project structure is:
     ├── jest.config.js
     ├── jest.setup.js
     ├── LICENSE
+    ├── package-lock.json
     ├── package.json
     ├── README.md
     ├── tsconfig.json
-    ├── webpack.config.js
-    └── yarn.lock
+    └── webpack.config.js
 
 <br>
 
@@ -110,6 +110,8 @@ Once the dependendencies have been installed, the project structure is:
 
 - **`LICENSE`**: The license under which this repository is released.
 
+- **`package-lock.json`**: An automatically generated file based on the exact versions of the npm dependencies that were installed for the project. **(Don’t change this file directly).**
+
 - **`package.json`**: A file which includes things like the project’s name, author, dependencies, etc. This file is how yarn/npm knows which packages to install for the project.
 
 - **`README.md`**: A file containing information about the project.
@@ -117,8 +119,6 @@ Once the dependendencies have been installed, the project structure is:
 - **`tsconfig.json`**: A configuration file for [TypeScript](https://www.typescriptlang.org), a typed superset of JavaScript that compiles to plain JavaScript.
 
 - **`webpack.config.js`**: A configuration file for [webpack](https://webpack.js.org), a static module bundler for JavaScript applications.
-
-- **`yarn.lock`**: An automatically generated file based on the exact versions of the npm dependencies that were installed for the project. **(Don’t change this file directly).**
 
 <br>
 

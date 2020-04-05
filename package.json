@@ -12,8 +12,7 @@
     "serve": "serve -s dist -l 7002",
     "test": "jest",
     "lint": "eslint \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx}\"",
-    "format": "prettier --write --check \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml,graphql}\"",
-    "reset": "rm -rf .cache dist node_modules && yarn install --frozen-lockfile"
+    "format": "prettier --write --check \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml,graphql}\""
   },
   "husky": {
     "hooks": {
@@ -22,10 +21,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn lint"
+      "npm run lint"
     ],
     "*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml,graphql}": [
-      "yarn format"
+      "npm run format"
     ]
   },
   "dependencies": {
