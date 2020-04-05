@@ -7,16 +7,17 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "tsc && webpack-dev-server --mode=development",
-    "build": "rm -rf dist && tsc && webpack --mode=production",
+    "start": "webpack-dev-server --mode=development",
+    "build": "rm -rf dist && webpack --mode=production",
     "serve": "serve -s dist -l 7002",
+    "typecheck": "tsc",
     "test": "jest",
     "lint": "eslint \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write --check \"{,!(.cache|dist|node_modules)/**/}*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml,graphql}\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run typecheck && npm run test && lint-staged"
     }
   },
   "lint-staged": {
