@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     --font-size-m: 22px;
     --font-size-l: 30px;
     --font-size-xl: 46px;
-    --padding: 4%;
+    --padding: 5%;
   }
 
   html
