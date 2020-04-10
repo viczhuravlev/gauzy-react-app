@@ -1,5 +1,5 @@
 <h1 align="center">
-  Gauzy ⚗️ Frontend
+  Gauzy ⚗️ Frontend 1
 </h1>
 
 <br>
