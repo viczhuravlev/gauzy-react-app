@@ -51,8 +51,7 @@ module.exports = (env, options) => {
       },
     },
     performance: {
-      hints: isDevelopment ? false : 'error',
-      maxEntrypointSize: 300_000,
+      hints: false,
     },
     plugins: [
       new HtmlWebpackPlugin({
