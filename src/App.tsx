@@ -3,16 +3,14 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import {GlobalStyles, Header, Main} from './components';
 
-const preloadHome = import('./views/Home/Home' /* webpackChunkName: 'Home' */);
+const preloadHome = import('./views' /* webpackChunkName: 'Home' */);
 const Home = React.lazy(() =>
   preloadHome.then(({Home}) => ({
     default: Home,
   })),
 );
 
-const preloadAbout = import(
-  './views/About/About' /* webpackChunkName: 'About' */
-);
+const preloadAbout = import('./views' /* webpackChunkName: 'About' */);
 const About = React.lazy(() =>
   preloadAbout.then(({About}) => ({
     default: About,

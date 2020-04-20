@@ -8,6 +8,6 @@ const StyledMain = styled.main`
   width: 100%;
 `;
 
-export function Main(props: {children: React.ReactNode}): JSX.Element {
-  return <StyledMain>{props.children}</StyledMain>;
+export function Main({children}: {children: React.ReactNode}): JSX.Element {
+  return <StyledMain>{children}</StyledMain>;
 }
