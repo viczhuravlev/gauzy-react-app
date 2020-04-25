@@ -45,22 +45,24 @@ Once the dependendencies have been installed, the project structure is:
     ├── node_modules
     │    └── (many stuff)
     ├── src
+    │    ├── __mocks__
     │    ├── components
     │    ├── constants
     │    ├── views
     │    ├── App.tsx
     │    ├── index.html
     │    └── index.tsx
-    ├── .babelrc.json
+    ├── .babelrc
     ├── .dockerignore
-    ├── .eslintrc.json
+    ├── .eslintrc
     ├── .gitignore
-    ├── .prettierrc.json
+    ├── .huskyrc
+    ├── .lintstagedrc
+    ├── .prettierrc
     ├── docker-compose.yml
     ├── Dockerfile
     ├── global.d.ts
     ├── jest.config.js
-    ├── jest.setup.js
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
@@ -76,6 +78,8 @@ Once the dependendencies have been installed, the project structure is:
 
 - **`/src`**: This directory contains all of the app's source code.
 
+  - `/__mocks__`: This folder contains mock setup files for [Jest](https://jestjs.io), a JavaScript testing framework.
+
   - `/components`: This folder contains files that represent reusable UI pieces.
 
   - `/constants`: This folder contains files that represent constant values used by components.
@@ -88,15 +92,19 @@ Once the dependendencies have been installed, the project structure is:
 
   - `index.tsx`: This component defines where in the `index.html` template the `App.tsx` component is placed and rendered.
 
-- **`.babelrc.json`**: A configuration file for [Babel](https://babeljs.io), a JavaScript compiler.
+- **`.babelrc`**: A configuration file for [Babel](https://babeljs.io), a JavaScript compiler.
 
 - **`.dockerignore`**: A file that tells [Docker](https://www.docker.com/) which files it should not include in a image.
 
-- **`.eslintrc.json`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript, TypeScript, and React.
+- **`.eslintrc`**: A configuration file for [ESLint](https://eslint.org), a linting utility for JavaScript, TypeScript, and React.
 
 - **`.gitignore`**: A file that tells [Git](https://git-scm.com) which files it should not track / not maintain a version history for.
 
-- **`.prettierrc.json`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
+- **`.huskyrc`**: A configuration file for [Husky](https://github.com/typicode/husky), a git hooks manager.
+
+- **`.lintstagedrc`**: A configuration file for [lint-staged](https://github.com/okonet/lint-staged), a package to run linters on staged files.
+
+- **`.prettierrc`**: A configuration file for [Prettier](https://prettier.io), a code formatter.
 
 - **`docker-compose.yml`**: A file that defines the [Docker](https://www.docker.com/) services to run and its configuration.
 
@@ -105,8 +113,6 @@ Once the dependendencies have been installed, the project structure is:
 - **`global.d.ts`**: A file that declares special modules that are used in the project to [TypeScript](https://www.typescriptlang.org).
 
 - **`jest.config.js`**: A configuration file for [Jest](https://jestjs.io), a JavaScript testing framework.
-
-- **`jest.setup.js`**: A setup file for [Jest](https://jestjs.io), a JavaScript testing framework.
 
 - **`LICENSE`**: The license under which this repository is released.
 
