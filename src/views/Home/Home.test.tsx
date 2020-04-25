@@ -1,11 +1,11 @@
 import React from 'react';
-import {render} from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import {render, screen} from '@testing-library/react';
 
 import {Home} from './Home';
 
 test('renders heading', () => {
-  const {getByText} = render(<Home />);
-  const heading = getByText(/home/i);
+  render(<Home />);
+  const heading = screen.getByText(/home/i);
+
   expect(heading).toBeInTheDocument();
 });
