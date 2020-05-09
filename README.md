@@ -60,7 +60,6 @@ Once the dependendencies have been installed, the project structure is:
     ├── .prettierrc
     ├── docker-compose.yml
     ├── Dockerfile
-    ├── global.d.ts
     ├── jest.config.js
     ├── LICENSE
     ├── package-lock.json
@@ -106,8 +105,6 @@ Once the dependendencies have been installed, the project structure is:
 - **`docker-compose.yml`**: A file that defines the [Docker](https://www.docker.com/) services to run and its configuration.
 
 * **`Dockerfile`**: A file that specifies the instructions to build a [Docker](https://www.docker.com/) image.
-
-- **`global.d.ts`**: A file that declares special modules that are used in the project to [TypeScript](https://www.typescriptlang.org).
 
 - **`jest.config.js`**: A configuration file for [Jest](https://jestjs.io), a JavaScript testing framework.
 
