@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InlineChunkWebpackPlugin = require('fixed-webpack4-html-webpack-inline-chunk-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = (env, options) => {
@@ -25,12 +26,37 @@ module.exports = (env, options) => {
         {
           test: /\.ts(x)?$/,
           exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                cacheDirectory: true,
+              },
             },
-          },
+            {
+              loader: 'linaria/loader',
+              options: {
+                sourceMap: isDevelopment ? true : false,
+              },
+            },
+          ],
+        },
+        {
+          test: /\.css$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: isDevelopment ? true : false,
+              },
+            },
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: isDevelopment ? true : false,
+              },
+            },
+          ],
         },
       ],
     },
@@ -75,6 +101,9 @@ module.exports = (env, options) => {
       new InlineChunkWebpackPlugin({
         inlineChunks: ['runtime'],
         quiet: true,
+      }),
+      new MiniCssExtractPlugin({
+        filename: isDevelopment ? '[name].css' : '[name].[contenthash:8].css',
       }),
       ...(isDevelopment
         ? []

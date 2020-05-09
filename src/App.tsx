@@ -1,29 +1,26 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import {GlobalStyles, Header, Main} from './components';
+import {Header, Main} from './components';
 
-const preloadHome = import('./views/Home/Home' /* webpackChunkName: 'Home' */);
 const Home = React.lazy(() =>
-  preloadHome.then(({Home}) => ({
+  import('./views/Home/Home' /* webpackChunkName: 'Home' */).then(({Home}) => ({
     default: Home,
   })),
 );
 
-const preloadAbout = import(
-  './views/About/About' /* webpackChunkName: 'About' */
-);
 const About = React.lazy(() =>
-  preloadAbout.then(({About}) => ({
-    default: About,
-  })),
+  import('./views/About/About' /* webpackChunkName: 'About' */).then(
+    ({About}) => ({
+      default: About,
+    }),
+  ),
 );
 
 export function App(): JSX.Element {
   return (
     <React.StrictMode>
       <BrowserRouter>
-        <GlobalStyles />
         <Header />
         <Main>
           <React.Suspense fallback={<div>{'Loading...'}</div>}>

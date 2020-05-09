@@ -13,7 +13,7 @@ The tech stack is:
 - [TypeScript](https://www.typescriptlang.org)
 - [React](https://reactjs.org)
 - [React Router](https://reacttraining.com/react-router/web)
-- [styled-components](https://www.styled-components.com)
+- [Linaria](https://linaria.now.sh/)
 - [webpack](https://webpack.js.org)
 - [Babel](https://babeljs.io)
 - [ESLint](https://eslint.org)
@@ -47,7 +47,6 @@ Once the dependendencies have been installed, the project structure is:
     ├── src
     │    ├── __mocks__
     │    ├── components
-    │    ├── constants
     │    ├── views
     │    ├── App.tsx
     │    ├── index.html
@@ -81,8 +80,6 @@ Once the dependendencies have been installed, the project structure is:
   - `/__mocks__`: This folder contains mock setup files for [Jest](https://jestjs.io), a JavaScript testing framework.
 
   - `/components`: This folder contains files that represent reusable UI pieces.
-
-  - `/constants`: This folder contains files that represent constant values used by components.
 
   - `/views`: This folder contains the views of the application, which are larger components made up of smaller components.
 

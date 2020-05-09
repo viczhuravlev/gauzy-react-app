@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import {css} from 'linaria';
 
-const StyledMain = styled.main`
+const main = css`
   margin: 0 auto;
   max-width: var(--content-width);
   padding: 0 var(--padding);
@@ -9,5 +9,5 @@ const StyledMain = styled.main`
 `;
 
 export function Main({children}: {children: React.ReactNode}): JSX.Element {
-  return <StyledMain>{children}</StyledMain>;
+  return <main className={main}>{children}</main>;
 }

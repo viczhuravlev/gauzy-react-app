@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import {css} from 'linaria';
 
-const StyledH1 = styled.h1`
+const heading = css`
   font-size: var(--font-size-xl);
+  font-weight: bold;
 `;
 
 export function PageTitle({children}: {children: string}): JSX.Element {
-  return <StyledH1>{children}</StyledH1>;
+  return <h1 className={heading}>{children}</h1>;
 }

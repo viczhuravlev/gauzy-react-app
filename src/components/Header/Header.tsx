@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import {NavLink as RouterLink} from 'react-router-dom';
+import {css} from 'linaria';
+import {NavLink} from 'react-router-dom';
 
 const ActiveNavLink = {
   boxShadow: '0px 3px 0 0 var(--color-accent)',
 };
 
-const Container = styled.div`
+const container = css`
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -16,17 +16,17 @@ const Container = styled.div`
   padding: 0 var(--padding);
 `;
 
-const Logo = styled.div`
+const logo = css`
   font-size: var(--font-size-l);
   font-weight: 700;
   letter-spacing: -1px;
 `;
 
-const NavLink = styled(RouterLink)`
+const navLink = css`
   margin-left: 20px;
 `;
 
-const StyledHeader = styled.header`
+const header = css`
   backdrop-filter: blur(5px);
   background-color: var(--color-dark-translucent);
   height: 60px;
@@ -39,18 +39,18 @@ const StyledHeader = styled.header`
 
 export function Header(): JSX.Element {
   return (
-    <StyledHeader>
-      <Container>
-        <Logo>{'Gauzy ⚗️ Frontend 1'}</Logo>
+    <header className={header}>
+      <div className={container}>
+        <div className={logo}>{'Gauzy ⚗️ Frontend 1'}</div>
         <nav>
-          <NavLink exact to="/" activeStyle={ActiveNavLink}>
+          <NavLink exact to="/" className={navLink} activeStyle={ActiveNavLink}>
             {'Home'}
           </NavLink>
-          <NavLink to="/about" activeStyle={ActiveNavLink}>
+          <NavLink to="/about" className={navLink} activeStyle={ActiveNavLink}>
             {'About'}
           </NavLink>
         </nav>
-      </Container>
-    </StyledHeader>
+      </div>
+    </header>
   );
 }

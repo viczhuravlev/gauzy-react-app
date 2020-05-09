@@ -8,14 +8,7 @@
       }
     ],
     "@babel/preset-react",
-    "@babel/preset-typescript"
-  ],
-  "plugins": [
-    [
-      "babel-plugin-styled-components",
-      {
-        "pure": true
-      }
-    ]
+    "@babel/preset-typescript",
+    "linaria/babel"
   ]
 }
