@@ -3,7 +3,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InlineChunkWebpackPlugin = require('fixed-webpack4-html-webpack-inline-chunk-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
@@ -97,10 +96,6 @@ module.exports = (env, options) => {
               useShortDoctype: true,
             },
         template: './src/index.html',
-      }),
-      new InlineChunkWebpackPlugin({
-        inlineChunks: ['runtime'],
-        quiet: true,
       }),
       new MiniCssExtractPlugin({
         filename: isDevelopment ? '[name].css' : '[name].[contenthash:8].css',
