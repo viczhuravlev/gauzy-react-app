@@ -1,16 +1,16 @@
-import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import React from "react";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-import {Header, Main} from './components';
+import {Header, Main} from "./components";
 
 const Home = React.lazy(() =>
-  import('./views/Home/Home' /* webpackChunkName: 'Home' */).then(({Home}) => ({
+  import("./views/Home/Home" /* webpackChunkName: 'Home' */).then(({Home}) => ({
     default: Home,
   })),
 );
 
 const About = React.lazy(() =>
-  import('./views/About/About' /* webpackChunkName: 'About' */).then(
+  import("./views/About/About" /* webpackChunkName: 'About' */).then(
     ({About}) => ({
       default: About,
     }),
@@ -23,7 +23,7 @@ export function App(): JSX.Element {
       <BrowserRouter>
         <Header />
         <Main>
-          <React.Suspense fallback={<div>{'Loading...'}</div>}>
+          <React.Suspense fallback={<div>{"Loading..."}</div>}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />

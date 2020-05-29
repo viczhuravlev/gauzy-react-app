@@ -1,24 +1,24 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = (env, options) => {
-  const isDevelopment = options.mode !== 'production';
+  const isDevelopment = options.mode !== "production";
 
   return {
-    mode: isDevelopment ? 'development' : 'production',
-    target: 'web',
-    entry: './src/index.tsx',
+    mode: isDevelopment ? "development" : "production",
+    target: "web",
+    entry: "./src/index.tsx",
     output: {
-      filename: isDevelopment ? '[name].js' : '[name].[contenthash:8].js',
-      path: path.join(__dirname, '/dist'),
+      filename: isDevelopment ? "[name].js" : "[name].[contenthash:8].js",
+      path: path.join(__dirname, "/dist"),
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.js'],
+      extensions: [".ts", ".tsx", ".js"],
     },
     module: {
       rules: [
@@ -27,13 +27,13 @@ module.exports = (env, options) => {
           exclude: /node_modules/,
           use: [
             {
-              loader: 'babel-loader',
+              loader: "babel-loader",
               options: {
                 cacheDirectory: true,
               },
             },
             {
-              loader: 'linaria/loader',
+              loader: "linaria/loader",
               options: {
                 sourceMap: isDevelopment ? true : false,
               },
@@ -50,7 +50,7 @@ module.exports = (env, options) => {
               },
             },
             {
-              loader: 'css-loader',
+              loader: "css-loader",
               options: {
                 sourceMap: isDevelopment ? true : false,
               },
@@ -59,16 +59,16 @@ module.exports = (env, options) => {
         },
       ],
     },
-    devtool: isDevelopment ? 'eval-cheap-module-source-map' : 'source-map',
+    devtool: isDevelopment ? "eval-cheap-module-source-map" : "source-map",
     optimization: {
       runtimeChunk: {
-        name: 'runtime',
+        name: "runtime",
       },
       splitChunks: {
-        chunks: 'all',
+        chunks: "all",
         cacheGroups: {
           vendor: {
-            name: 'vendors',
+            name: "vendors",
             test: /[\\/]node_modules[\\/]/,
           },
         },
@@ -95,25 +95,25 @@ module.exports = (env, options) => {
               removeStyleLinkTypeAttributes: true,
               useShortDoctype: true,
             },
-        template: './src/index.html',
+        template: "./src/index.html",
       }),
       new MiniCssExtractPlugin({
-        filename: isDevelopment ? '[name].css' : '[name].[contenthash:8].css',
+        filename: isDevelopment ? "[name].css" : "[name].[contenthash:8].css",
       }),
       ...(isDevelopment
         ? []
         : [
             new CompressionPlugin({
-              algorithm: 'brotliCompress',
+              algorithm: "brotliCompress",
               compressionOptions: {level: 11},
-              filename: '[path].br[query]',
+              filename: "[path].br[query]",
               test: /\.(js|css|html|svg)$/,
             }),
           ]),
       ...(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : []),
     ],
     stats: {
-      assetsSort: '!size',
+      assetsSort: "!size",
       builtAt: false,
       children: false,
       entrypoints: false,
@@ -124,9 +124,9 @@ module.exports = (env, options) => {
       timings: false,
     },
     devServer: {
-      contentBase: 'dist',
+      contentBase: "dist",
       historyApiFallback: true,
-      host: '0.0.0.0',
+      host: "0.0.0.0",
       hot: true,
       port: 8080,
     },

@@ -1,9 +1,9 @@
-import React from 'react';
-import {render, screen} from '@testing-library/react';
+import React from "react";
+import {render, screen} from "@testing-library/react";
 
-import {About} from './About';
+import {About} from "./About";
 
-test('renders heading', () => {
+test("renders heading", () => {
   render(<About />);
   const heading = screen.getByText(/about/i);
 

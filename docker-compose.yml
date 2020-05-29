@@ -1,10 +1,10 @@
-version: '3.8'
+version: "3.8"
 
 services:
   frontend:
     build: ./
     image: gauzy-frontend
     ports:
-      - '8080:8080'
+      - "8080:8080"
     volumes:
       - ./:/usr/src/app

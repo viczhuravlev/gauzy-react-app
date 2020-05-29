@@ -1,9 +1,9 @@
-import React from 'react';
-import {css} from 'linaria';
-import {NavLink} from 'react-router-dom';
+import React from "react";
+import {css} from "linaria";
+import {NavLink} from "react-router-dom";
 
 const activeNavLink = {
-  boxShadow: '0px 3px 0 0 var(--color-accent)',
+  boxShadow: "0px 3px 0 0 var(--color-accent)",
 };
 
 const container = css`
@@ -41,13 +41,13 @@ export function Header(): JSX.Element {
   return (
     <header className={header}>
       <div className={container}>
-        <div className={logo}>{'Gauzy ⚗️ Frontend'}</div>
+        <div className={logo}>{"Gauzy ⚗️ Frontend"}</div>
         <nav>
           <NavLink exact to="/" className={navLink} activeStyle={activeNavLink}>
-            {'Home'}
+            {"Home"}
           </NavLink>
           <NavLink to="/about" className={navLink} activeStyle={activeNavLink}>
-            {'About'}
+            {"About"}
           </NavLink>
         </nav>
       </div>

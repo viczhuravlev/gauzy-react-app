@@ -1,5 +1,5 @@
-import React from 'react';
-import {css} from 'linaria';
+import React from "react";
+import {css} from "linaria";
 
 const main = css`
   margin: 0 auto;

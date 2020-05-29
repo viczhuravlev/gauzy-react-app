@@ -1,5 +1,5 @@
-import React from 'react';
-import {css} from 'linaria';
+import React from "react";
+import {css} from "linaria";
 
 const heading = css`
   font-size: var(--font-size-xl);
