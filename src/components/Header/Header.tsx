@@ -41,7 +41,7 @@ export function Header(): JSX.Element {
   return (
     <header className={header}>
       <div className={container}>
-        <div className={logo}>{'Gauzy ⚗️ Frontend 1'}</div>
+        <div className={logo}>{'Gauzy ⚗️ Frontend'}</div>
         <nav>
           <NavLink exact to="/" className={navLink} activeStyle={activeNavLink}>
             {'Home'}

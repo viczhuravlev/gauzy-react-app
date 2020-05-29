@@ -1,10 +1,15 @@
+.dockerignore
+.eslintrc
 .git
 .gitignore
+.huskyrc
+.lintstagedrc
+.prettierrc
 .vscode
-.dockerignore
 dist
 docker-compose*
 Dockerfile*
+jest.config.js
 LICENSE
 node_modules
 README.md

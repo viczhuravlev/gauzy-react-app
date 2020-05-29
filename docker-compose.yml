@@ -1,11 +1,9 @@
-version: '3.7'
+version: '3.8'
 
 services:
   frontend:
     build: ./
-    image: gauzy-frontend-1
-    environment:
-      NODE_ENV: development
+    image: gauzy-frontend
     ports:
       - '8080:8080'
     volumes:
