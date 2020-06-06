@@ -3,7 +3,7 @@ version: "3.8"
 services:
   frontend:
     build: ./
-    image: gauzy-frontend
+    image: gauzy-react-app
     ports:
       - "8080:8080"
     volumes:

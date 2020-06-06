@@ -1,12 +1,12 @@
 <h1 align="center">
-  Gauzy ⚗️ Frontend
+  Gauzy React App ⚗
 </h1>
 
 <br>
 
 ## Description
 
-This is a basic frontend template project to use as starting point to build something or to just test stuff. It has been done in a reasonably transparent way to see how everything works under the hood and to allow to configure the necessary.
+This is a basic react app template project to use as starting point to build something or to just test stuff. It has been done in a reasonably transparent way to see how everything works under the hood and to allow to configure the necessary.
 
 The tech stack is:
 

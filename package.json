@@ -1,15 +1,15 @@
 {
-  "name": "gauzy-frontend",
+  "name": "gauzy-react-app",
   "description": "A transparent frontend template to build upon or test stuff.",
   "author": "@lewislbr",
-  "repository": "https://github.com/lewislbr/gauzy-frontend.git",
+  "repository": "https://github.com/lewislbr/gauzy-react-app.git",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "build": "rm -rf dist && webpack --mode=production",
-    "serve": "serve -s dist -l 7002",
+    "serve": "serve -s dist -l 8080",
     "typecheck": "tsc",
     "test": "jest",
     "lint": "eslint --ext .js,.ts,.tsx .",
