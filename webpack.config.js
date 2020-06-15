@@ -59,7 +59,9 @@ module.exports = (env, options) => {
         },
       ],
     },
-    devtool: isDevelopment ? "eval-cheap-module-source-map" : "source-map",
+    devtool: isDevelopment
+      ? "eval-cheap-module-source-map"
+      : "nosources-source-map",
     optimization: {
       runtimeChunk: {
         name: "runtime",
